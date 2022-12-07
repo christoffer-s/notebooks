@@ -1,2 +1,3 @@
-print("hello")
-print("you are poop")
+
+def f(x):
+    return x
