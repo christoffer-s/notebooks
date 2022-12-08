@@ -1,4 +1,3 @@
-def f(x):
-    return x
+txt = input("txt: ")
 
-print(f(4))
+print(txt)
