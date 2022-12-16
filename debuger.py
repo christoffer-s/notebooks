@@ -3,9 +3,12 @@ def integer(n):
         return n
     
     elif isinstance(n, float):
-        return int(n)
+        if n.is_integer():
+            return int(n)
+        else:
+            return n
 
-    elif sinstance(n, list):
+    elif isinstance(n, list):
         for i, num in enumerate(n):
             if isinstance(num, int):
                 continue
@@ -17,6 +20,6 @@ def integer(n):
     else:
         None
 
-tall = 2000.2
+tall = [2012.4, 21.0, 21, 123.000, 123.0001]
 
 print(integer(tall))
