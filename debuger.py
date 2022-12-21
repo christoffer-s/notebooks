@@ -1,25 +1,30 @@
 def integer(n):
-    if isinstance(n, int):
-        return n
-    
-    elif isinstance(n, float):
-        if n.is_integer():
-            return int(n)
-        else:
-            return n
-
-    elif isinstance(n, list):
+    if isinstance(n, list):
         for i, num in enumerate(n):
-            if isinstance(num, int):
+            try:
+                if float(num).is_integer():
+                    n[i] = int(float(num))
+                
+                else:
+                    n[i] = float(num)
+            
+            except:
                 continue
-
-            elif num.is_integer():
-                n[i] = int(num)
-        return n
         
+        return n
+
     else:
-        None
+        try:
+            if float(n).is_integer():
+                return int(float(n))
+            
+            else:
+                return float(n)
+        except:
+            return n
+    
+    
 
-tall = [2012.4, 21.0, 21, 123.000, 123.0001]
-
+tall = ["hello", "4.2", 4.2, 4, 2, 54.0, "54.0"]
+    
 print(integer(tall))
