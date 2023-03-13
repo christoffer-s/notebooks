@@ -1,24 +1,17 @@
-resistors = [[10], [5]]
+def serie(r):
+    return sum(r)
 
-def resistance(r, index=0):
-    typ = isinstance(r, list)
-    parallel_i = []
-    if typ:
-        for i, val in enumerate(r):
-            if isinstance(val, list):
-                if len(val) > 1:
-                    resistance(val, i)
-                
-                else:
-                    
-                     
-            
-
-
+def parallel(r):
+    rp = 0
+    for resistor in r:
+        rp += resistor ** -1
     
-    else:
-        return sum(r)
+    return rp ** -1
 
-print(resistance(resistors))
-        
-    
+def identifyer(r):
+    for resistor in r:
+        if not isinstance(resistor, list):
+            pass
+
+
+print(parallel([2, 2]))
