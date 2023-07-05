@@ -1,7 +1,6 @@
-from matplotlib import pyplot as plt
-import pandas as pd
+def resistance(r: list):
+    return r
 
+x = [1, 2, 3]
 
-data = pd.read_csv("co2.csv")
-
-plt.plot(data)
+print(resistance(x))
