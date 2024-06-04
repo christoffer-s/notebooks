@@ -1,5 +1,6 @@
 {
-    "python.linting.pylintEnabled": false,
-    "python.linting.enabled": false,
-    "python.linting.lintOnSave": false
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.lintOnSave": true,
+    "cmake.configureOnOpen": true
 }
