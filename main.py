@@ -5,7 +5,7 @@ def code(n: int) -> None:
 
 
 def main() -> None:
-    n = 2.3
+    n = 2
     code(n)
     print('finised')
 
